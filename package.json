@@ -53,6 +53,7 @@
     "jsdom": "^20.0.1",
     "msw": "^0.47.4",
     "prettier": "^2.7.1",
+    "rollup-plugin-visualizer": "^5.8.2",
     "typescript": "^4.6.4",
     "vite": "^3.1.0",
     "vite-tsconfig-paths": "^3.5.1",
