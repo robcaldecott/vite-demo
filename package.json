@@ -7,9 +7,12 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
+    "lint": "eslint src",
     "test": "vitest",
     "test:coverage": "vitest --coverage",
-    "extract": "formatjs extract 'src/**/*.tsx' --format simple --out-file temp.json"
+    "tsc": "tsc",
+    "extract": "formatjs extract 'src/**/*.tsx' --format simple --out-file temp.json",
+    "format": "prettier -w src"
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",
