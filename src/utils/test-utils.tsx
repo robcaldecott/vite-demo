@@ -1,9 +1,9 @@
 import { ReactElement, ReactNode } from "react";
-import { IntlProvider } from "react-intl";
 import { MemoryRouter } from "react-router-dom";
 import { Experimental_CssVarsProvider as CssVarsProvider } from "@mui/material";
 import { render, RenderOptions } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { LocaleProvider } from "@/providers/LocaleProvider";
 import { theme } from "@/utils/theme";
 
 interface ProvidersProps {
@@ -13,9 +13,9 @@ interface ProvidersProps {
 function Providers(props: ProvidersProps) {
   return (
     <CssVarsProvider theme={theme}>
-      <IntlProvider locale="en-GB" defaultLocale="en-GB">
+      <LocaleProvider>
         <MemoryRouter>{props.children}</MemoryRouter>
-      </IntlProvider>
+      </LocaleProvider>
     </CssVarsProvider>
   );
 }

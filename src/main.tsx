@@ -9,6 +9,7 @@ import {
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { App } from "@/App";
+import { LocaleProvider } from "@/providers/LocaleProvider";
 import { theme } from "@/utils/theme";
 
 import("./mocks/browser").then(({ worker }) => {
@@ -27,14 +28,14 @@ import("./mocks/browser").then(({ worker }) => {
     <React.StrictMode>
       <CssVarsProvider theme={theme}>
         <CssBaseline />
-        <IntlProvider locale="en-GB" defaultLocale="en-GB">
+        <LocaleProvider>
           <BrowserRouter>
             <QueryClientProvider client={queryClient}>
               <App />
               <ReactQueryDevtools />
             </QueryClientProvider>
           </BrowserRouter>
-        </IntlProvider>
+        </LocaleProvider>
       </CssVarsProvider>
     </React.StrictMode>
   );
